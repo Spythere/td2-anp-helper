@@ -1,0 +1,45 @@
+wersja 1.0.0
+
+posterunek Otwocko Ot
+
+mapuj Śr-Ot_Wjazd 2Pi
+mapuj Ot-Św_Wjazd 1Wa 
+mapuj Śr-Ot_Wyjazd 1Pi
+mapuj Ot-Św_Wyjazd 2Wa
+
+# wjazd <szlak wj.> <min_postój> <typ_postoju> <szlak wyj.> <kategorie> <definicja wjazdu/przelotu> <definicja wyjazdu> <opóźn. wjazdu> <opóźn. wyjazdu>
+wjazd 1Wa 0 - 1Pi * 1Wa_Przelot_1Pi - 0.5 -
+wjazd 1Wa - - - RPJ,ROJ,APM 1Wa_Wjazd_21,22 - - -
+wjazd 1Wa - - - T,P,L 1Wa_Wjazd_4,6 - - -
+wjazd 1Wa - - - * 1Wa_Wjazd_1 - - -
+wjazd 1Wa 1 ph 1Pi * 1Wa_Wjazd_1 1Pi_Wyjazd_1 - -
+wjazd 1Wa 5 pt 1Pi * 1Wa_Wjazd_4,6 1Pi_Wyjazd_4,6 - -
+wjazd 1Wa 5 - 1Pi * 1Wa_Wjazd_4,6 1Pi_Wyjazd_4,6 - -
+
+wjazd 2Pi 0 - 2Wa * 2Pi_Przelot_2Wa - 0.5 -
+wjazd 2Pi - - - E,R,M 2Pi_Wjazd_2 - - -
+wjazd 2Pi - - - * 2Pi_Wjazd_4,6 - - -
+wjazd 2Pi 1 ph 2Wa * 2Pi_Wjazd_2 2Wa_Wyjazd_2 - -
+wjazd 2Pi 5 pt 2Wa * 2Pi_Wjazd_4,6 2Wa_Wyjazd_4,6 - -
+wjazd 2Pi 5 - 2Wa * 2Pi_Wjazd_4,6 2Wa_Wyjazd_4,6 - -
+
+# Przeloty
+definiuj 1Wa_Przelot_1Pi "it1W P B P 1Pi - - Poc"
+definiuj 2Pi_Przelot_2Wa "it2P L S H 2Wa - - Poc"
+
+# Wjazdy
+definiuj 1Wa_Wjazd_1 "it1W P B - P - - Poc"
+definiuj 1Wa_Wjazd_21,22 "it1W P B - 21k_,22k_ - - Poc"
+definiuj 1Wa_Wjazd_4,6 "it1W P B - M,N - - Poc"
+
+definiuj 2Pi_Wjazd_2 "it2P L S - H - - Poc"
+definiuj 2Pi_Wjazd_4,6 "it2P L S - K,J - - Poc"
+
+# Wyjazdy
+definiuj 1Pi_Wyjazd_1 "Jt1 P P - 1Pi - - Poc"
+definiuj 1Pi_Wyjazd_4,6 "Jt6,Jt4 P M,N - 1Pi - - Poc"
+
+definiuj 2Wa_Wyjazd_2 "Jt2 L H - 2Wa - - Poc"
+definiuj 2Wa_Wyjazd_4,6 "Jt6,Jt4 L K,J - 2Wa - - Poc"
+
+###

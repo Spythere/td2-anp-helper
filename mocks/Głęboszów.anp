@@ -1,0 +1,74 @@
+wersja 1.0.0
+
+posterunek Głęboszów Gb
+posterunek Torków_,podg. Tr
+
+mapuj it565_Wjazd 1Br
+mapuj it595_Wyjazd 1Tr 
+mapuj it604_Wjazd 2Tr
+mapuj it574_Wyjazd 2Br
+
+mapuj it639_Wyjazd 1GO
+mapuj it650_Wjazd 2GO
+mapuj it634_Wyjazd 2Gb
+mapuj it625_Wjazd 1Gb
+
+mapuj Wg_Wjazd 1Wg
+mapuj Wg_Wyjazd 1Wg
+
+# Głęboszów
+wjazd 1Br 0 - 1Tr * 1Br_Przelot_1Tr - - -
+wjazd 1Br - - - T,P,L 1Br_Wjazd_5,7 - - -
+wjazd 1Br - - - * 1Br_Wjazd_3 - - -
+wjazd 1Br 10 ph 1Tr * 1Br_Wjazd_3 1Tr_Wyjazd_3 - -
+wjazd 1Br 1 ph 1Tr * 1Br_Wjazd_1 1Tr_Wyjazd_1 - -
+wjazd 1Br 5 pt 1Tr * 1Br_Wjazd_5,7 1Tr_Wyjazd_5,7 - -
+wjazd 1Br 5 - 1Tr * 1Br_Wjazd_5,7 1Tr_Wyjazd_1 - -
+
+wjazd 2Tr 0 - 2Br * 2Tr_Przelot_2Br - - -
+wjazd 2Tr - - - T,P,L 2Tr_Wjazd_5,7 - - -
+wjazd 2Tr - - - * 2Tr_Wjazd_3 - - -
+wjazd 2Tr 10 ph 2Br * 2Tr_Wjazd_3 2Br_Wyjazd - -
+wjazd 2Tr 1 ph 2Br * 2Tr_Wjazd_2 2Br_Wyjazd - -
+wjazd 2Tr 5 pt 2Br * 2Tr_Wjazd_5,7 2Br_Wyjazd - -
+wjazd 2Tr 5 - 2Br * 2Tr_Wjazd_5,7 2Br_Wyjazd - -
+
+# Torków
+wjazd 2GO 0 * 2Gb * 2GO_Przelot_2Gb - - -
+wjazd 1Wg 0 * 2Gb * 1Wg_Przelot_2Gb - - -
+wjazd 1Gb 0 * 1GO * 1Gb_Przelot_1GO - - -
+wjazd 1Gb 0 * 1Wg * 1Gb_Przelot_1Wg - - -
+
+
+# Przeloty
+definiuj 1Br_Przelot_1Tr "it545|it555 P Gb_B Gb_L Gb_1Tr - - Poc"
+definiuj 2Tr_Przelot_2Br "it624|it614|it604 L Gb_R Gb_G 2Br - - Poc"
+
+# Wjazdy
+definiuj 1Br_Wjazd_1,3 "it545|it555 P Gb_B - Gb_L,Gb_M - - Poc"
+definiuj 1Br_Wjazd_1 "it545|it555 P Gb_B - Gb_L - - Poc"
+definiuj 1Br_Wjazd_5,7 "it545|it555 P Gb_B - Gb_N,Gb_O - - Poc"
+definiuj 1Br_Wjazd_3 "it545|it555 P Gb_B - Gb_M - - Poc"
+
+definiuj 2Tr_Wjazd_2 "it624|it614|it604 L Gb_R - Gb_G - - Poc"
+definiuj 2Tr_Wjazd_3 "it624|it614|it604 L Gb_R - Gb_E - - Poc"
+definiuj 2Tr_Wjazd_2,3 "it624|it614|it604 L Gb_R - Gb_G,Gb_E - - Poc"
+definiuj 2Tr_Wjazd_5,7 "it624|it614|it604 L Gb_R - Gb_D,Gb_C - - Poc"
+
+# Wyjazdy
+definiuj 1Tr_Wyjazd_1,3 "Gb_Jt1,Gb_Jt3 P Gb_L,Gb_M - Gb_1Tr - - Poc"
+definiuj 1Tr_Wyjazd_3 ",Gb_Jt3 P Gb_M - Gb_1Tr - - Poc"
+definiuj 1Tr_Wyjazd_1 "Gb_Jt1 P Gb_L - Gb_1Tr - - Poc"
+definiuj 1Tr_Wyjazd_5,7 "Gb_Jt5,Gb_Jt7 P Gb_N,Gb_O - Gb_1Tr - - Poc"
+
+definiuj 2Br_Wyjazd "Gb_Jt1,Gb_Jt2,Gb_Jt3,Gb_Jt5,Gb_Jt7 L Gb_G,Gb_F,Gb_E,Gb_D,Gb_C - 2Br - - Poc"
+
+definiuj 2GO_Przelot_2Gb "it670|it660|it650 L Tr_E - Tr_2Gb - - Poc"
+definiuj 1Gb_Przelot_1GO "it615|it603|it625 P Tr_B - 1GO - - Poc"
+
+definiuj 1Wg_Przelot_2Gb "it1TW L Tr_C - Tr_2Gb - - Poc"
+definiuj 1Gb_Przelot_1Wg "it615|it603|it625 P Tr_B - 1Wg - - Poc"
+
+
+###
+przebieg 1111 - - - 1Br_Przelot_1Tr

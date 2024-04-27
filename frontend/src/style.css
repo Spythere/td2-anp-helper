@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+html,
+body {
+    @apply h-full select-none bg-slate-900 font-sans antialiased text-white p-1;
+}
+
+#app {
+    @apply h-full;
+}

@@ -1,0 +1,31 @@
+wersja 1.0.0
+
+posterunek Poreńsk Ot
+
+mapuj Mt_Arr Mt
+mapuj WP-Pr_Arr 1Wa 
+mapuj Mt_Dep 1Pi
+mapuj WP-Pr_Dep 2Wa 
+
+def
+definiuj 1Wa_Wjazd_Hand "it1W P B - P - - Poc"
+definiuj 1Wa_Wjazd_Kon "it1W P B - 21k_,22k_ - - Poc"
+definiuj 1Wa_Wjazd_Tech "it1W P B - M,N - - Poc"
+
+definiuj 2Pi_Wjazd_Hand "it2P L S - H - - Poc"
+definiuj 2Pi_Wjazd_Tech "it2P L S - K,J - - Poc"
+definiuj 2Pi_Wjazd_Kon "it2P L S - K,J - - Poc"
+
+definiuj 1Pi_Wyjazd_Hand "Jt1 P P - 1Pi - - Poc"
+definiuj 1Pi_Wyjazd_Tech "Jt6,Jt4 P M,N - 1Pi - - Poc"
+
+definiuj 2Wa_Wyjazd_Hand "Jt2 L H - 2Wa - - Poc"
+definiuj 2Wa_Wyjazd_Tech "Jt6,Jt4 L K,J - 2Wa - - Poc"
+
+definiuj 1Wa_Przelot_1Pi "it1W P B P 1Pi - - Poc"
+definiuj 2Pi_Przelot_2Wa "it2P L S H 2Wa - - Poc"
+/def
+
+###
+przebieg P - - - 1Wa_Wjazd_Tech
+przebieg N - - - 2Pi_Wjazd_Tech
